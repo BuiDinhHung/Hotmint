@@ -7,7 +7,7 @@
     background-color: #fcfcfc; 
     padding: 15px; 
     border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05); /* Đổ bóng nhẹ giúp menu nổi bật trên web */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
     color: #333; 
     line-height: 1.4; 
   }
@@ -34,14 +34,12 @@
   .hotmint-tab-btn:hover { background-color: #72962c; }
   .hotmint-tab-btn.active { background-color: #c4175b; box-shadow: 0 4px 8px rgba(196, 23, 91, 0.3); }
 
-  /* KHUNG CUỘN (CHỐNG VƯỢT KHUNG WEBCAKE) */
+  /* KHUNG CUỘN */
   .hotmint-scroll-box {
-    max-height: 550px; /* Giới hạn chiều cao menu, sửa số này nếu muốn cao/thấp hơn */
+    max-height: 550px; 
     overflow-y: auto; 
     padding-right: 15px;
   }
-  
-  /* Làm đẹp thanh cuộn */
   .hotmint-scroll-box::-webkit-scrollbar { width: 5px; }
   .hotmint-scroll-box::-webkit-scrollbar-track { background: #f1f1f1; border-radius: 10px; }
   .hotmint-scroll-box::-webkit-scrollbar-thumb { background: #c4175b; border-radius: 10px; }
@@ -51,7 +49,7 @@
   .hotmint-panel.active { display: block; }
   @keyframes fadeIn { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: translateY(0); } }
 
-  /* TIÊU ĐỀ BÊN TRONG MENU */
+  /* TIÊU ĐỀ */
   .cat-pink { background-color: #c4175b; color: #fff; font-size: 18px; font-weight: bold; padding: 8px 15px; margin: 20px 0 15px 0; text-transform: uppercase; border-radius: 4px; }
   .cat-green { background-color: #8ab535; color: #fff; font-size: 18px; font-weight: bold; padding: 8px 15px; margin: 20px 0 15px 0; text-transform: uppercase; border-radius: 4px; }
   
@@ -60,7 +58,16 @@
   .intro-text { flex: 1; }
   .menu-note { font-size: 14px; color: #555; }
   .menu-note-highlight { color: #c4175b; font-weight: bold; }
-  .intro-image img { width: 120px; height: 120px; object-fit: cover; border-radius: 50%; border: 3px solid #eee; box-shadow: 0 4px 6px rgba(0,0,0,0.15); }
+  
+  /* HÌNH ẢNH TO RÕ RÀNG */
+  .intro-image img { 
+    width: 180px; 
+    height: 180px; 
+    object-fit: cover; 
+    border-radius: 50%; 
+    border: 4px solid #eee; 
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2); 
+  }
 
   /* CẤU TRÚC MÓN ĂN */
   .menu-item { display: flex; justify-content: space-between; align-items: flex-end; padding: 10px 0; border-bottom: 1px dotted #ccc; }
@@ -84,7 +91,8 @@
     .menu-item { flex-direction: column; align-items: flex-start; }
     .price-wrapper { width: 100%; justify-content: flex-end; margin-top: 8px; }
     .menu-intro-section { flex-direction: column-reverse; }
-    .intro-image { text-align: center; width: 100%; margin-bottom: 10px; }
+    .intro-image { text-align: center; width: 100%; margin-bottom: 15px; }
+    .intro-image img { width: 150px; height: 150px; } 
   }
 </style>
 
@@ -117,7 +125,7 @@
             </ul>
           </div>
         </div>
-        <div class="intro-image"><img src="https://placehold.co/300x300/c4175b/FFF?text=Thay+Anh+Trua" alt="Mittagskarte"></div>
+        <div class="intro-image"><img src="/1.jpg" alt="Mittagskarte"></div>
       </div>
 
       <div style="display: flex; justify-content: flex-end; gap: 15px;">
@@ -147,7 +155,7 @@
             <u>Wahlweise mit:</u> pikanter Chili-Fisch Soße oder Hoisin Soße oder Erdnuss Soße <span class="allergen">e</span>
           </div>
         </div>
-        <div class="intro-image"><img src="https://placehold.co/300x300/8ab535/FFF?text=Thay+Anh+Cuon" alt="Sommerrollen"></div>
+        <div class="intro-image"><img src="/2.jpg" alt="Sommerrollen"></div>
       </div>
 
       <div class="menu-item"><div class="item-left"><div class="item-id">18.</div><div class="item-name">mit Tofu <span class="allergen">F</span> <span style="float:right;margin-right:15px;">1 Stk.</span></div></div><div class="price-wrapper"><div class="price-val">4,00</div></div></div>
@@ -168,7 +176,7 @@
     <div id="SuppenVor" class="hotmint-panel">
       <div class="cat-green" style="margin-top:0;">SUPPEN</div>
       <div class="menu-intro-section" style="justify-content: flex-end;">
-        <div class="intro-image"><img src="https://placehold.co/300x300/8ab535/FFF?text=Thay+Anh+Sup" alt="Suppen"></div>
+        <div class="intro-image"><img src="/3.jpg" alt="Suppen"></div>
       </div>
       <div class="menu-item"><div class="item-left"><div class="item-id">1.</div><div class="item-name">Peking Sauer- Scharf Suppe mit Hühnerfleisch, leicht scharf <span class="allergen">c</span></div></div><div class="price-wrapper"><div class="price-val">4,00</div></div></div>
       <div class="menu-item"><div class="item-left"><div class="item-id">2.</div><div class="item-name">Gemüsesuppe mit Tofu und Glasnudeln <span class="allergen">f</span></div></div><div class="price-wrapper"><div class="price-val">4,00</div></div></div>
@@ -180,7 +188,7 @@
 
       <div class="cat-pink">VORSPEISEN</div>
       <div class="menu-intro-section" style="justify-content: flex-end;">
-        <div class="intro-image"><img src="https://placehold.co/300x300/c4175b/FFF?text=Thay+Anh+KhaiVi" alt="Vorspeisen"></div>
+        <div class="intro-image"><img src="/4.jpg" alt="Vorspeisen"></div>
       </div>
       <div class="menu-item"><div class="item-left"><div class="item-id">10.</div><div class="item-name">Krupuk - Krabbenchips <span class="allergen">b</span></div></div><div class="price-wrapper"><div class="price-val">2,00</div></div></div>
       <div class="menu-item"><div class="item-left"><div class="item-id">12.</div><div class="item-name">Gemüse-Minirollen (6 Stk.)</div></div><div class="price-wrapper"><div class="price-val">3,00</div></div></div>
@@ -202,7 +210,7 @@
     <div id="NudelnReis" class="hotmint-panel">
       <div class="cat-green" style="margin-top:0;">NUDELN & REIS SPEZIALITÄTEN</div>
       <div class="menu-intro-section" style="justify-content: flex-end;">
-        <div class="intro-image"><img src="https://placehold.co/300x300/8ab535/FFF?text=Thay+Anh+MiCom" alt="Nudeln"></div>
+        <div class="intro-image"><img src="/5.jpg" alt="Nudeln"></div>
       </div>
       <div class="menu-item"><div class="item-left"><div class="item-id">30.</div><div class="item-name">Pho Bo - Vietnamesische Reisbandnudelsuppe mit Rindfleisch, Frühlingszwiebeln und frische Kräuter</div></div><div class="price-wrapper"><div class="price-val">12,50</div></div></div>
       <div class="menu-item"><div class="item-left"><div class="item-id">31.</div><div class="item-name">Wan-Tan Mi Suppe - Eiernudelsuppe mit Krabben und Teigtaschen gefüllt mit Hühnerfleisch <span class="allergen">b,a</span></div></div><div class="price-wrapper"><div class="price-val">12,50</div></div></div>
@@ -233,8 +241,16 @@
 
     <div id="Kombis" class="hotmint-panel">
       <div class="cat-green" style="text-align: center; margin-top:0;">HOT MINT KOMBIS<br><small style="font-size: 14px; font-weight: normal; text-transform:none;">Kombinieren Sie selbst!</small></div>
+      
       <div class="cat-pink" style="font-size: 16px;">WÄHLE + 1 SOßE <small>(AUF WUNSCH AUCH NICHT SCHARF)</small></div>
-      <div class="menu-note" style="font-size: 12px;">* <u>Gemüse:</u> Champignon, Karotten, Bambus, Zwiebeln, Broccoli, Zucchini, Sojasprossen, Brechbohnen</div>
+      
+      <div class="menu-intro-section" style="justify-content: space-between; align-items: center;">
+        <div class="intro-text">
+           <div class="menu-note" style="font-size: 12px;">* <u>Gemüse:</u> Champignon, Karotten, Bambus, Zwiebeln, Broccoli, Zucchini, Sojasprossen, Brechbohnen</div>
+        </div>
+        <div class="intro-image"><img src="/7.jpg" alt="Soßen & Gemüse"></div>
+      </div>
+
       <div class="menu-item"><div class="item-left"><div class="item-id">W1.</div><div class="item-name">Süß-Sauer Soße mit Ananas, Champignon, Karotten, Bambus & Zwiebeln</div></div></div>
       <div class="menu-item"><div class="item-left"><div class="item-id">W2.</div><div class="item-name">Chop Suey - Gemüse und Austern Soße <span class="allergen">A,R,2,10</span></div></div></div>
       <div class="menu-item"><div class="item-left"><div class="item-id">W3.</div><div class="item-name">Gemüse* mit Kokosmilch und gelber Curry, leicht scharf</div></div></div>
@@ -248,6 +264,11 @@
       <div class="menu-item"><div class="item-left"><div class="item-id">W12.</div><div class="item-name">Gemüse* mit Ingwer und Thaibasilikum <span class="allergen">A,R,2,10</span></div></div></div>
 
       <div class="cat-pink" style="font-size: 16px; margin-top: 30px;">WÄHLE + DANN DAS FLEISCH DAZU <small>inkl. Beilage Jasminreis</small></div>
+      
+      <div class="menu-intro-section" style="justify-content: flex-end;">
+        <div class="intro-image"><img src="/8.jpg" alt="Fleisch & Jasminreis"></div>
+      </div>
+
       <div class="menu-item"><div class="item-left"><div class="item-id">V.</div><div class="item-name">vegetarisch (nur mit Gemüse)</div></div><div class="price-wrapper"><div class="price-val">8,00</div></div></div>
       <div class="menu-item"><div class="item-left"><div class="item-id">T.</div><div class="item-name">Tofu <span class="allergen">F</span></div></div><div class="price-wrapper"><div class="price-val">8,50</div></div></div>
       <div class="menu-item"><div class="item-left"><div class="item-id">H.</div><div class="item-name">Hühnerfleisch</div></div><div class="price-wrapper"><div class="price-val">9,00</div></div></div>
@@ -264,7 +285,7 @@
     <div id="DessertDrink" class="hotmint-panel">
       <div class="cat-pink" style="margin-top:0;">NACHSPEISE</div>
       <div class="menu-intro-section" style="justify-content: flex-end;">
-        <div class="intro-image"><img src="https://placehold.co/300x300/c4175b/FFF?text=Thay+Anh+TrangMieng" alt="Dessert"></div>
+        <div class="intro-image"><img src="/6.jpg" alt="Dessert"></div>
       </div>
       <div class="menu-item"><div class="item-left"><div class="item-name">Gebackene Banane mit Honig & Erdnüsse</div></div><div class="price-wrapper"><div class="price-val">5,00</div></div></div>
       <div class="menu-item"><div class="item-left"><div class="item-name">Gegrillte Banane mit Kokosmilch & Erdnüsse</div></div><div class="price-wrapper"><div class="price-val">6,00</div></div></div>
@@ -329,29 +350,22 @@
       </div>
     </div>
 
-  </div> </div>
+  </div> 
+</div>
 
 <script>
   function openMenu(evt, menuName) {
     var i, panels, tablinks;
-    
-    // Ẩn nội dung
     panels = document.getElementsByClassName("hotmint-panel");
     for (i = 0; i < panels.length; i++) { panels[i].classList.remove("active"); }
-    
-    // Bỏ màu nổi bật của tất cả tab
     tablinks = document.getElementsByClassName("hotmint-tab-btn");
     for (i = 0; i < tablinks.length; i++) { 
       tablinks[i].classList.remove("active"); 
       if(tablinks[i].innerText === "Hinweise") { tablinks[i].style.backgroundColor = "#555"; }
     }
-    
-    // Đặt màu nổi bật cho tab hiện tại
     document.getElementById(menuName).classList.add("active");
     evt.currentTarget.classList.add("active");
     if(menuName === "Allergene") { evt.currentTarget.style.backgroundColor = "#c4175b"; }
-    
-    // Khi bấm đổi tab, tự động cuộn menu lên trên cùng để xem cho dễ
     document.querySelector(".hotmint-scroll-box").scrollTop = 0;
   }
 </script>
