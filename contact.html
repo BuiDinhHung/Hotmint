@@ -1,136 +1,174 @@
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
 <style>
-  /* Cài đặt chung cho khu vực Liên hệ & Footer (Mặc định dùng Roboto) */
+  /* Cài đặt chung - Mặc định dùng Roboto */
   .hotmint-contact-section {
     font-family: 'Roboto', sans-serif;
     color: #333;
     line-height: 1.5;
     background-color: #fff;
     padding-top: 40px;
+    -webkit-font-smoothing: antialiased; 
   }
 
   /* --- PHẦN TIÊU ĐỀ --- */
   .contact-header {
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 35px;
   }
   .contact-subtitle {
     color: #8ab535; /* Xanh lá Hot Mint */
-    font-size: 16px;
-    font-weight: 700; /* Roboto đậm */
+    font-size: 15px;
+    font-weight: 700; 
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 1.5px;
   }
   .contact-title {
-    font-family: 'Poppins', sans-serif; /* Dùng Poppins cho Tiêu đề */
+    font-family: 'Poppins', sans-serif;
     font-size: 38px;
     font-weight: 700;
-    color: #444;
+    color: #222;
     margin: 5px 0 0 0;
     text-transform: uppercase;
   }
 
-  /* --- THANH THÔNG TIN (INFO BAR) --- */
+  /* --- THANH THÔNG TIN 5 CỘT (INFO BAR) --- */
   .info-bar-container {
-    max-width: 1000px;
+    max-width: 1200px;
     margin: 0 auto 30px auto;
     background-color: #f9f9f9;
     border-radius: 10px;
-    padding: 20px 30px;
+    padding: 25px 20px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     flex-wrap: wrap;
     gap: 20px;
   }
   .info-item {
     display: flex;
-    align-items: center;
-    gap: 15px;
+    align-items: flex-start;
+    gap: 12px;
     flex: 1;
-    min-width: 200px;
+    min-width: 180px; 
   }
   .info-icon {
-    width: 45px;
-    height: 45px;
+    width: 40px;
+    height: 40px;
     background-color: #c4175b; /* Màu hồng Hot Mint */
     color: #fff;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 18px;
+    font-size: 15px;
     flex-shrink: 0;
+    margin-top: 2px;
   }
   .info-text h4 {
     color: #8ab535;
-    margin: 0 0 3px 0;
+    margin: 0 0 5px 0;
     font-size: 15px;
-    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
   }
   .info-text p {
     margin: 0;
-    font-size: 14px;
-    color: #555;
+    font-size: 14.5px;
+    color: #444;
     font-weight: 500;
+    line-height: 1.6;
   }
-  .info-text a {
-    color: #555;
+  
+  /* Link có thể click (Gọi điện, Mail, Bản đồ) */
+  .contact-link {
+    color: #444;
     text-decoration: none;
-    transition: color 0.3s;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    display: inline-block;
   }
-  .info-text a:hover { color: #c4175b; }
+  .contact-link:hover { 
+    color: #c4175b; 
+    text-decoration: underline;
+  }
 
   /* Ghi chú tiền mặt nổi bật */
   .cash-only-note {
     color: #c4175b !important;
-    font-size: 15px !important;
-    font-weight: 700;
+    font-weight: 700 !important;
   }
 
-  /* --- BẢN ĐỒ GOOGLE MAPS --- */
-  .map-container {
-    max-width: 1000px;
+  /* --- BẢN ĐỒ GOOGLE MAPS VÀ NÚT CHUYỂN HƯỚNG --- */
+  .map-wrapper {
+    max-width: 1200px;
     margin: 0 auto;
     border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    height: 350px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    display: flex;
+    flex-direction: column;
+  }
+  .map-container {
+    width: 100%;
+    height: 380px;
   }
   .map-container iframe {
     width: 100%;
     height: 100%;
     border: 0;
   }
+  .map-btn {
+    display: block;
+    background-color: #8ab535;
+    color: #fff;
+    text-align: center;
+    padding: 12px 15px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: background-color 0.3s ease;
+  }
+  .map-btn i {
+    margin-right: 8px;
+  }
+  .map-btn:hover {
+    background-color: #c4175b; /* Đổi sang hồng khi hover */
+    color: #fff;
+  }
 
   /* --- FOOTER (CHÂN TRANG) --- */
   .hotmint-footer {
     font-family: 'Roboto', sans-serif;
-    background-color: #f4f4f4; /* Bạn có thể đổi màu nền này nếu muốn khớp với nền xanh nhạt của ảnh */
-    padding: 50px 20px;
+    background-color: #f4f4f4; 
+    padding: 60px 20px;
     margin-top: 50px;
   }
   .footer-inner {
-    max-width: 1000px;
+    max-width: 1200px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    gap: 30px;
+    gap: 40px;
   }
   .footer-col {
     flex: 1;
     min-width: 250px;
   }
   .footer-col h3 {
-    font-family: 'Poppins', sans-serif; /* Poppins cho Tiêu đề cột */
-    font-size: 22px;
+    font-family: 'Poppins', sans-serif; 
+    font-size: 20px;
     font-weight: 700;
     color: #c4175b;
     margin: 0 0 20px 0;
     text-transform: uppercase;
+    letter-spacing: 0.5px;
   }
   .footer-list {
     list-style: none;
@@ -139,17 +177,21 @@
   }
   .footer-list li {
     display: flex;
+    align-items: flex-start;
     margin-bottom: 15px;
-    font-size: 14px;
+    font-size: 14.5px;
     color: #444;
     line-height: 1.6;
+    font-weight: 400;
   }
   .footer-list li i {
     color: #c4175b;
     width: 25px;
     font-size: 16px;
-    margin-top: 3px;
+    margin-top: 4px;
+    flex-shrink: 0;
   }
+  
   .footer-logo-col {
     text-align: center;
     display: flex;
@@ -158,32 +200,33 @@
     justify-content: center;
   }
   
-  /* CHỮ HOT MINT THEO CHUẨN ẢNH (POPPINS, CHỮ THƯỜNG, XANH) */
+  /* CHỮ HOT MINT */
   .footer-logo-col h2 {
     font-family: 'Poppins', sans-serif; 
     font-size: 58px;
     font-weight: 700;
-    color: #319a53; /* Xanh lá chuẩn ảnh */
+    color: #319a53; 
     margin: 0;
     line-height: 1;
-    text-transform: lowercase; /* Ép về chữ thường */
+    text-transform: lowercase; 
   }
   
-  /* CHỮ ASIATISCHE KÜCHE THEO CHUẨN ẢNH (ROBOTO, ĐẬM, HỒNG) */
+  /* CHỮ ASIATISCHE KÜCHE */
   .footer-logo-col p {
     font-family: 'Roboto', sans-serif;
     font-size: 26px;
-    color: #df5d83; /* Hồng chuẩn ảnh */
+    color: #df5d83; 
     font-weight: 700;
     margin: 2px 0 0 0;
-    text-transform: none; /* Giữ nguyên dạng Asiatische Küche */
+    text-transform: none; 
   }
 
   /* Mobile Responsive */
   @media (max-width: 768px) {
-    .info-bar-container { flex-direction: column; padding: 20px; }
+    .info-bar-container { flex-direction: column; padding: 25px 20px; gap: 30px; }
     .info-item { width: 100%; }
-    .footer-inner { flex-direction: column; }
+    .map-container { height: 300px; }
+    .footer-inner { flex-direction: column; gap: 40px; }
     .contact-title { font-size: 28px; }
     .footer-logo-col h2 { font-size: 46px; }
     .footer-logo-col p { font-size: 20px; }
@@ -198,41 +241,66 @@
   </div>
 
   <div class="info-bar-container">
+    
     <div class="info-item">
       <div class="info-icon"><i class="fa-solid fa-location-dot"></i></div>
       <div class="info-text">
-        <h4>Adresse</h4>
-        <p>Rothenburger Str. 36a<br>90522 Oberasbach</p>
+        <h4>Wohnadresse</h4>
+        <p>
+          <a class="contact-link" href="https://www.google.com/maps/search/?api=1&query=Hot+Mint+Asiatische+Küche,+Rothenburger+Str.+36a,+90522+Oberasbach" target="_blank">
+            Rothenburger Str. 36a<br>90522 Oberasbach
+          </a>
+        </p>
       </div>
     </div>
+    
     <div class="info-item">
       <div class="info-icon"><i class="fa-solid fa-phone"></i></div>
       <div class="info-text">
         <h4>Rufen Sie uns an</h4>
-        <p><a href="tel:091139400593">0911 / 39 400 593</a><br><a href="tel:01623180652">0162 318 06 52</a></p>
+        <p>
+          <a class="contact-link" href="tel:091139400593">0911 / 39 400 593</a><br>
+          <a class="contact-link" href="tel:01623180652">0162 318 06 52</a>
+        </p>
       </div>
     </div>
+
+    <div class="info-item">
+      <div class="info-icon"><i class="fa-solid fa-envelope"></i></div>
+      <div class="info-text">
+        <h4>Schreib uns</h4>
+        <p><a class="contact-link" href="mailto:info@hotmint.de">info@hotmint.de</a></p>
+      </div>
+    </div>
+
     <div class="info-item">
       <div class="info-icon" style="background-color: #8ab535;"><i class="fa-solid fa-clock"></i></div>
       <div class="info-text">
-        <h4 style="color: #c4175b;">Öffnungszeiten</h4>
-        <p>Di - So: 11:30-14:15 & 17:00-20:45<br><span style="color:#777; font-weight:400;">Montag Ruhetag</span></p>
+        <h4 style="color: #c4175b;">Öffnungszeit</h4>
+        <p>Di - So: 11:30-14:15<br>& 17:00-20:45<br><span style="color:#777; font-weight:400;">Montag Ruhetag</span></p>
       </div>
     </div>
+
     <div class="info-item">
       <div class="info-icon"><i class="fa-solid fa-wallet"></i></div>
       <div class="info-text">
-        <h4>Zahlungsmittel</h4>
+        <h4>Zahlung</h4>
         <p class="cash-only-note">Nur Barzahlung</p>
       </div>
     </div>
+
   </div>
 
-  <div class="map-container">
-    <iframe 
-      src="https://maps.google.com/maps?q=Rothenburger%20Str.%2036a,%2090522%20Oberasbach&t=&z=15&ie=UTF8&iwloc=&output=embed" 
-      allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-    </iframe>
+  <div class="map-wrapper">
+    <div class="map-container">
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d20756.73823564108!2d10.962349815051388!3d49.43552179999998!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479f543ffce53d4d%3A0xed2b3e274a1878e4!2sHot%20Mint%20Asiatische%20K%C3%BCche!5e0!3m2!1svi!2s!4v1775619742355!5m2!1svi!2s" 
+        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+    <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=Hot+Mint+Asiatische+Küche,+Rothenburger+Str.+36a,+90522+Oberasbach" target="_blank">
+      <i class="fa-solid fa-map-location-dot"></i> Auf Google Maps öffnen
+    </a>
   </div>
 
 </div>
@@ -243,8 +311,22 @@
     <div class="footer-col">
       <h3>Kontakt</h3>
       <ul class="footer-list">
-        <li><i class="fa-solid fa-location-dot"></i> <div>Rothenburger Str. 36a<br>90522 Oberasbach</div></li>
-        <li><i class="fa-solid fa-phone"></i> <div>0911 / 39 400 593<br>0162 318 06 52</div></li>
+        <li><i class="fa-solid fa-location-dot"></i> 
+          <div>
+            <a class="contact-link" href="https://www.google.com/maps/search/?api=1&query=Hot+Mint+Asiatische+Küche,+Rothenburger+Str.+36a,+90522+Oberasbach" target="_blank">
+              Rothenburger Str. 36a<br>90522 Oberasbach
+            </a>
+          </div>
+        </li>
+        <li><i class="fa-solid fa-phone"></i> 
+          <div>
+            <a class="contact-link" href="tel:091139400593">0911 / 39 400 593</a><br>
+            <a class="contact-link" href="tel:01623180652">0162 318 06 52</a>
+          </div>
+        </li>
+        <li><i class="fa-solid fa-envelope"></i> 
+          <div><a class="contact-link" href="mailto:info@hotmint.de">info@hotmint.de</a></div>
+        </li>
         <li><i class="fa-solid fa-wallet"></i> <div class="cash-only-note">Nur Barzahlung möglich!</div></li>
       </ul>
     </div>
