@@ -1,0 +1,252 @@
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+  /* Cài đặt chung cho khu vực Liên hệ & Footer */
+  .hotmint-contact-section {
+    font-family: 'Nunito', sans-serif;
+    color: #333;
+    line-height: 1.5;
+    background-color: #fff;
+    padding-top: 40px;
+  }
+
+  /* --- PHẦN TIÊU ĐỀ --- */
+  .contact-header {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .contact-subtitle {
+    color: #8ab535; /* Xanh lá Hot Mint */
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  .contact-title {
+    font-family: 'Caveat', cursive; /* Font viết tay giống ảnh mẫu */
+    font-size: 48px;
+    color: #444;
+    margin: 5px 0 0 0;
+  }
+
+  /* --- THANH THÔNG TIN (INFO BAR) --- */
+  .info-bar-container {
+    max-width: 1000px;
+    margin: 0 auto 30px auto;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .info-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex: 1;
+    min-width: 200px;
+  }
+  .info-icon {
+    width: 45px;
+    height: 45px;
+    background-color: #c4175b; /* Màu hồng Hot Mint */
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    flex-shrink: 0;
+  }
+  .info-text h4 {
+    color: #8ab535;
+    margin: 0 0 3px 0;
+    font-size: 15px;
+    font-weight: 700;
+  }
+  .info-text p {
+    margin: 0;
+    font-size: 13px;
+    color: #555;
+    font-weight: bold;
+  }
+  .info-text a {
+    color: #555;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  .info-text a:hover { color: #c4175b; }
+
+  /* Ghi chú tiền mặt nổi bật */
+  .cash-only-note {
+    color: #c4175b !important;
+    font-size: 15px !important;
+    font-weight: bold;
+  }
+
+  /* --- BẢN ĐỒ GOOGLE MAPS --- */
+  .map-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    height: 350px;
+  }
+  .map-container iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+
+  /* --- FOOTER (CHÂN TRANG) --- */
+  .hotmint-footer {
+    background-color: #f4f4f4;
+    padding: 50px 20px;
+    margin-top: 50px;
+  }
+  .footer-inner {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  .footer-col {
+    flex: 1;
+    min-width: 250px;
+  }
+  .footer-col h3 {
+    font-family: 'Caveat', cursive;
+    font-size: 32px;
+    color: #c4175b;
+    margin: 0 0 20px 0;
+  }
+  .footer-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .footer-list li {
+    display: flex;
+    margin-bottom: 15px;
+    font-size: 14px;
+    color: #444;
+  }
+  .footer-list li i {
+    color: #c4175b;
+    width: 25px;
+    font-size: 16px;
+    margin-top: 3px;
+  }
+  .footer-logo-col {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .footer-logo-col h2 {
+    font-family: 'Caveat', cursive;
+    font-size: 50px;
+    color: #8ab535;
+    margin: 0;
+    line-height: 1;
+  }
+  .footer-logo-col p {
+    font-size: 14px;
+    color: #c4175b;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-top: 5px;
+  }
+
+  /* Mobile Responsive */
+  @media (max-width: 768px) {
+    .info-bar-container { flex-direction: column; padding: 20px; }
+    .info-item { width: 100%; }
+    .footer-inner { flex-direction: column; }
+    .contact-title { font-size: 38px; }
+  }
+</style>
+
+<div class="hotmint-contact-section">
+  
+  <div class="contact-header">
+    <div class="contact-subtitle">Contact Us</div>
+    <h2 class="contact-title">Kontaktiere uns</h2>
+  </div>
+
+  <div class="info-bar-container">
+    <div class="info-item">
+      <div class="info-icon"><i class="fa-solid fa-location-dot"></i></div>
+      <div class="info-text">
+        <h4>Adresse</h4>
+        <p>Rothenburger Str. 36a<br>90522 Oberasbach</p>
+      </div>
+    </div>
+    <div class="info-item">
+      <div class="info-icon"><i class="fa-solid fa-phone"></i></div>
+      <div class="info-text">
+        <h4>Rufen Sie uns an</h4>
+        <p><a href="tel:091139400593">0911 / 39 400 593</a><br><a href="tel:01623180652">0162 318 06 52</a></p>
+      </div>
+    </div>
+    <div class="info-item">
+      <div class="info-icon" style="background-color: #8ab535;"><i class="fa-solid fa-clock"></i></div>
+      <div class="info-text">
+        <h4 style="color: #c4175b;">Öffnungszeiten</h4>
+        <p>Di - So: 11:30-14:15 & 17:00-20:45<br><span style="color:#777; font-weight:normal;">Montag Ruhetag</span></p>
+      </div>
+    </div>
+    <div class="info-item">
+      <div class="info-icon"><i class="fa-solid fa-wallet"></i></div>
+      <div class="info-text">
+        <h4>Zahlungsmittel</h4>
+        <p class="cash-only-note">Nur Barzahlung</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="map-container">
+    <iframe 
+      src="https://maps.google.com/maps?q=Hot+Mint+Asiatische+Küche+Rothenburger+Str.+36a,+90522+Oberasbach&t=&z=16&ie=UTF8&iwloc=&output=embed" 
+      allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+
+</div>
+
+<div class="hotmint-footer">
+  <div class="footer-inner">
+    
+    <div class="footer-col">
+      <h3>Kontakt</h3>
+      <ul class="footer-list">
+        <li><i class="fa-solid fa-location-dot"></i> <div>Rothenburger Str. 36a<br>90522 Oberasbach</div></li>
+        <li><i class="fa-solid fa-phone"></i> <div>0911 / 39 400 593<br>0162 318 06 52</div></li>
+        <li><i class="fa-solid fa-wallet"></i> <div class="cash-only-note">Nur Barzahlung möglich!</div></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h3>Öffnungszeiten</h3>
+      <ul class="footer-list">
+        <li><i class="fa-solid fa-clock"></i> <div><strong>Dienstag - Sonntag:</strong><br>11:30 - 14:15 Uhr<br>17:00 - 20:45 Uhr</div></li>
+        <li><i class="fa-solid fa-calendar-xmark" style="color: #8ab535;"></i> <div><strong>Montag:</strong> Ruhetag</div></li>
+      </ul>
+    </div>
+
+    <div class="footer-col footer-logo-col">
+      <h2>Hot Mint</h2>
+      <p>Asiatische Küche</p>
+    </div>
+
+  </div>
+</div>
