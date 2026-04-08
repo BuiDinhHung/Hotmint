@@ -138,7 +138,7 @@
     margin-right: 8px;
   }
   .map-btn:hover {
-    background-color: #c4175b; /* Đổi sang hồng khi hover */
+    background-color: #c4175b; 
     color: #fff;
   }
 
@@ -200,7 +200,6 @@
     justify-content: center;
   }
   
-  /* CHỮ HOT MINT */
   .footer-logo-col h2 {
     font-family: 'Poppins', sans-serif; 
     font-size: 58px;
@@ -211,7 +210,6 @@
     text-transform: lowercase; 
   }
   
-  /* CHỮ ASIATISCHE KÜCHE */
   .footer-logo-col p {
     font-family: 'Roboto', sans-serif;
     font-size: 26px;
@@ -221,12 +219,47 @@
     text-transform: none; 
   }
 
-  /* Mobile Responsive */
+  /* ================= MOBILE RESPONSIVE (ĐÃ CĂN GIỮA) ================= */
   @media (max-width: 768px) {
-    .info-bar-container { flex-direction: column; padding: 25px 20px; gap: 30px; }
-    .info-item { width: 100%; }
+    /* Khung Info Bar */
+    .info-bar-container { 
+      flex-direction: column; 
+      align-items: center; /* Căn giữa toàn bộ cột */
+      padding: 30px 20px; 
+      gap: 35px; 
+    }
+    
+    /* Từng cột thông tin trên Mobile */
+    .info-item { 
+      width: 100%; 
+      flex-direction: column; /* Icon nằm trên chữ */
+      align-items: center; 
+      text-align: center; /* Chữ căn giữa */
+      gap: 10px;
+    }
+    .info-icon {
+      margin-top: 0;
+    }
+
     .map-container { height: 300px; }
-    .footer-inner { flex-direction: column; gap: 40px; }
+    
+    /* Khung Footer */
+    .footer-inner { 
+      flex-direction: column; 
+      text-align: center; /* Căn giữa toàn bộ text */
+      gap: 40px; 
+    }
+    
+    /* Danh sách trong Footer (Icon và chữ) */
+    .footer-list li {
+      justify-content: center; /* Kéo bộ đôi icon + chữ ra giữa */
+      text-align: center;
+    }
+    .footer-list li i {
+      margin-top: 3px;
+      margin-right: 5px; /* Giữ icon cách chữ một chút */
+    }
+
     .contact-title { font-size: 28px; }
     .footer-logo-col h2 { font-size: 46px; }
     .footer-logo-col p { font-size: 20px; }
