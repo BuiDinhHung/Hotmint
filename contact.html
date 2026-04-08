@@ -108,7 +108,7 @@
   /* --- FOOTER (CHÂN TRANG) --- */
   .hotmint-footer {
     font-family: 'Roboto', sans-serif;
-    background-color: #f4f4f4;
+    background-color: #f4f4f4; /* Bạn có thể đổi màu nền này nếu muốn khớp với nền xanh nhạt của ảnh */
     padding: 50px 20px;
     margin-top: 50px;
   }
@@ -158,26 +158,25 @@
     justify-content: center;
   }
   
-  /* CHỮ HOT MINT LÀ POPPINS */
+  /* CHỮ HOT MINT THEO CHUẨN ẢNH (POPPINS, CHỮ THƯỜNG, XANH) */
   .footer-logo-col h2 {
     font-family: 'Poppins', sans-serif; 
-    font-size: 42px;
+    font-size: 58px;
     font-weight: 700;
-    color: #8ab535;
+    color: #319a53; /* Xanh lá chuẩn ảnh */
     margin: 0;
-    line-height: 1.1;
-    text-transform: uppercase;
+    line-height: 1;
+    text-transform: lowercase; /* Ép về chữ thường */
   }
   
-  /* CHỮ ASIATISCHE KÜCHE LÀ ROBOTO */
+  /* CHỮ ASIATISCHE KÜCHE THEO CHUẨN ẢNH (ROBOTO, ĐẬM, HỒNG) */
   .footer-logo-col p {
     font-family: 'Roboto', sans-serif;
-    font-size: 15px;
-    color: #c4175b;
-    letter-spacing: 2px;
-    text-transform: uppercase;
+    font-size: 26px;
+    color: #df5d83; /* Hồng chuẩn ảnh */
     font-weight: 700;
-    margin-top: 5px;
+    margin: 2px 0 0 0;
+    text-transform: none; /* Giữ nguyên dạng Asiatische Küche */
   }
 
   /* Mobile Responsive */
@@ -186,7 +185,8 @@
     .info-item { width: 100%; }
     .footer-inner { flex-direction: column; }
     .contact-title { font-size: 28px; }
-    .footer-logo-col h2 { font-size: 36px; }
+    .footer-logo-col h2 { font-size: 46px; }
+    .footer-logo-col p { font-size: 20px; }
   }
 </style>
 
@@ -258,7 +258,7 @@
     </div>
 
     <div class="footer-col footer-logo-col">
-      <h2>Hot Mint</h2>
+      <h2>hot mint</h2>
       <p>Asiatische Küche</p>
     </div>
 
