@@ -17,6 +17,7 @@
     color: #333;
     margin-bottom: 25px;
     text-transform: uppercase;
+    padding: 0 15px;
   }
   .reviews-title span {
     color: #c4175b; /* Màu hồng Hot Mint */
@@ -27,12 +28,13 @@
     display: flex;
     width: max-content;
     align-items: stretch; /* Giúp các thẻ có cùng chiều cao */
-    /* Hiệu ứng chạy vô tận 45 giây (chạy chậm lại một chút để khách kịp đọc các review dài) */
     animation: scroll-left 45s linear infinite;
+    will-change: transform; /* TỐI ƯU 1: Dùng GPU để chạy mượt hơn, chống giật lag */
   }
 
-  /* Dừng chạy khi di chuột vào (trên máy tính) */
-  .review-track:hover {
+  /* Dừng chạy khi di chuột vào (PC) HOẶC chạm giữ (Mobile) */
+  .review-track:hover,
+  .review-track:active { /* TỐI ƯU 2: Hỗ trợ chạm giữ trên điện thoại */
     animation-play-state: paused;
   }
 
@@ -91,24 +93,32 @@
     flex-grow: 1; /* Đẩy tên tác giả xuống đáy thẻ */
   }
 
-  /* Tên khách hàng */
+  /* Tên khách hàng & Avatar */
   .review-author {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
   }
   .author-avatar {
-    width: 35px;
-    height: 35px;
+    width: 40px; /* TỐI ƯU 3: Avatar to hơn một chút cho cân đối */
+    height: 40px;
     border-radius: 50%;
-    background-color: #eee;
+    background-color: #e9f0df; /* Màu nền xanh nhạt hợp tone quán */
+    border: 2px solid #8ab535; /* Viền avatar */
     display: flex;
     align-items: center;
     justify-content: center;
     font-weight: bold;
     color: #8ab535;
-    font-size: 16px;
+    font-size: 18px;
+    overflow: hidden; /* Sẵn sàng nếu bạn chèn ảnh vào thẻ này */
   }
+  .author-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
   .author-name {
     font-weight: bold;
     font-size: 14px;
@@ -117,17 +127,32 @@
   .review-date {
     font-size: 11px;
     color: #999;
+    margin-top: 2px;
   }
 
   /* Hiệu ứng chuyển động */
   @keyframes scroll-left {
     0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); } /* Dịch chuyển đúng một nửa (phần gốc) để lặp lại phần nhân đôi */
+    100% { transform: translateX(-50%); } 
   }
 
-  /* Mobile Responsive */
-  @media (max-width: 600px) {
-    .review-card { width: 280px; padding: 15px; }
+  /* ================= TỐI ƯU 4: MOBILE RESPONSIVE HOÀN HẢO ================= */
+  @media (max-width: 768px) {
+    .hotmint-reviews-wrapper { 
+      padding: 20px 0; 
+    }
+    .reviews-title {
+      font-size: 20px; 
+    }
+    .review-card { 
+      width: 85vw; /* Tự động co giãn chiếm 85% màn hình điện thoại */
+      max-width: 320px; 
+      padding: 18px 15px; 
+      margin: 0 10px; /* Thu hẹp khoảng cách giữa các thẻ trên mobile */
+    }
+    .review-text { 
+      font-size: 13.5px; 
+    }
   }
 </style>
 
@@ -188,7 +213,6 @@
       <div class="review-text">"Ein kleines Restaurant...eigentlich mehr ein Imbiss, aber ein sehr gutes Angebot, die Speisen werden frisch zubereitet und sind sehr lecker. War zum ersten Mal, aber bestimmt nicht zum letzten Mal da."</div>
       <div class="review-author"><div class="author-avatar">W</div><div><div class="author-name">Werner Seitz</div><div class="review-date">vor 3 Jahren</div></div></div>
     </div>
-
 
     <div class="review-card">
       <div class="review-header"><div class="stars">★★★★★</div><div class="google-icon">G</div></div>
