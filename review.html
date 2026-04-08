@@ -108,15 +108,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-weight: bold;
-    color: #8ab535;
-    font-size: 18px;
-    overflow: hidden; /* Sẵn sàng nếu bạn chèn ảnh vào thẻ này */
+    overflow: hidden; /* Quan trọng để ảnh không tràn ra ngoài vòng tròn */
   }
   .author-avatar img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: cover; /* Giúp ảnh không bị méo, tự điền đầy vòng tròn */
   }
   
   .author-name {
@@ -163,109 +160,199 @@
     <div class="review-card">
       <div class="review-header"><div class="stars">★★★★★</div><div class="google-icon">G</div></div>
       <div class="review-text">"Sehr gutes Essen und Sonderwünsche werden immer beachtet. Die Angestellten sind immer nett und freundlich. Wir bestellen hier häufiger zum Abholen."</div>
-      <div class="review-author"><div class="author-avatar">N</div><div><div class="author-name">NaisBG</div><div class="review-date">vor 9 Monaten</div></div></div>
+      <div class="review-author">
+        <div class="author-avatar">
+          <img src="https://i.pravatar.cc/40?u=naisbg" alt="NaisBG">
+        </div>
+        <div><div class="author-name">NaisBG</div><div class="review-date">vor 9 Monaten</div></div>
+      </div>
     </div>
     
     <div class="review-card">
       <div class="review-header"><div class="stars">★★★★★</div><div class="google-icon">G</div></div>
       <div class="review-text">"Das Essen ist immer zügig fertig und immer sehr lecker! Nur die sauer-scharf Suppe hat geschmacklich seit einiger Zeit ein wenig nachgelassen. Bei Bedarf könnte man innen sitzen, aber das ist eher nicht mein Fall, ich hole immer ab."</div>
-      <div class="review-author"><div class="author-avatar">G</div><div><div class="author-name">gota yang</div><div class="review-date">vor einem Jahr</div></div></div>
+      <div class="review-author">
+        <div class="author-avatar">
+          <img src="https://i.pravatar.cc/40?u=gotayang" alt="gota yang">
+        </div>
+        <div><div class="author-name">gota yang</div><div class="review-date">vor einem Jahr</div></div>
+      </div>
     </div>
 
     <div class="review-card">
       <div class="review-header"><div class="stars">★★★★★</div><div class="google-icon">G</div></div>
       <div class="review-text">"War lecker, sehr zu empfehlen!"</div>
-      <div class="review-author"><div class="author-avatar">S</div><div><div class="author-name">Sven Marx</div><div class="review-date">vor 11 Monaten</div></div></div>
+      <div class="review-author">
+        <div class="author-avatar">
+          <img src="https://i.pravatar.cc/40?u=svenmarx" alt="Sven Marx">
+        </div>
+        <div><div class="author-name">Sven Marx</div><div class="review-date">vor 11 Monaten</div></div>
+      </div>
     </div>
 
     <div class="review-card">
       <div class="review-header"><div class="stars">★★★★★</div><div class="google-icon">G</div></div>
       <div class="review-text">"Vynikající kuchyně za příznivé ceny a velmi příjemná obsluha majiteli, příští týden jdu i s kolegy znovu na večeři nebo objednáme telefonicky s sebou...za 20 minut mají hotové skvělé jídlo k vyzvednutí !"</div>
-      <div class="review-author"><div class="author-avatar">P</div><div><div class="author-name">Pavel Jíně</div><div class="review-date">vor 6 Jahren</div></div></div>
+      <div class="review-author">
+        <div class="author-avatar">
+          <img src="https://i.pravatar.cc/40?u=paveljine" alt="Pavel Jíně">
+        </div>
+        <div><div class="author-name">Pavel Jíně</div><div class="review-date">vor 6 Jahren</div></div>
+      </div>
     </div>
 
     <div class="review-card">
       <div class="review-header"><div class="stars">★★★★★</div><div class="google-icon">G</div></div>
       <div class="review-text">"Das Essen schmeckt deutsch-thai. Dafür aber immer sehr gut und in konstanter Qualität. Wir holen immer einmal die Woche hier. KEINE Kartenzahlung!"</div>
-      <div class="review-author"><div class="author-avatar">V</div><div><div class="author-name">V. Y.</div><div class="review-date">vor 10 Monaten</div></div></div>
+      <div class="review-author">
+        <div class="author-avatar">
+          <img src="https://i.pravatar.cc/40?u=vy" alt="V. Y.">
+        </div>
+        <div><div class="author-name">V. Y.</div><div class="review-date">vor 10 Monaten</div></div>
+      </div>
     </div>
 
     <div class="review-card">
       <div class="review-header"><div class="stars">★★★★★</div><div class="google-icon">G</div></div>
       <div class="review-text">"Wir haben auf der Durchreise einen Stopp zum Mittagessen bei "Hot Mint Asiatische Küche" eingelegt. Wir wurden freundlich begrüßt und haben nach der Bestellung und kurzen Wartezeit auf unser Essen direkt im Imbiss an einem der drei Tische gegessen. Die Einrichtung ist unaufgeregt, aber zweckdienlich. Unsere "gebratenen Nudeln mit Hühnerfleisch (M1)" und "Hühnerfleisch und Gemüse mit Kokosmilch, Erdnuss Soße, pikant (M7)" haben sehr gut geschmeckt und sind besonders zu empfehlen."</div>
-      <div class="review-author"><div class="author-avatar">S</div><div><div class="author-name">Sebastian T.</div><div class="review-date">vor 3 Jahren</div></div></div>
+      <div class="review-author">
+        <div class="author-avatar">
+          <img src="https://i.pravatar.cc/40?u=sebastian" alt="Sebastian T.">
+        </div>
+        <div><div class="author-name">Sebastian T.</div><div class="review-date">vor 3 Jahren</div></div>
+      </div>
     </div>
 
     <div class="review-card">
       <div class="review-header"><div class="stars">★★★★★</div><div class="google-icon">G</div></div>
       <div class="review-text">"Sehr gutes Essen. Bestelle immer Ente die schmeckt sehr gut. Alles heiß und nach einer viertel Stunde fertig zum mitnehmen."</div>
-      <div class="review-author"><div class="author-avatar">A</div><div><div class="author-name">A. Sch.</div><div class="review-date">vor einem Jahr</div></div></div>
+      <div class="review-author">
+        <div class="author-avatar">
+          <img src="https://i.pravatar.cc/40?u=asch" alt="A. Sch.">
+        </div>
+        <div><div class="author-name">A. Sch.</div><div class="review-date">vor einem Jahr</div></div>
+      </div>
     </div>
 
     <div class="review-card">
       <div class="review-header"><div class="stars">★★★★★</div><div class="google-icon">G</div></div>
       <div class="review-text">"Sehr gutes Essen! Schmeckt hervorragend und auch sehr günstig! Ich kann nur weiterempfehlen!"</div>
-      <div class="review-author"><div class="author-avatar">M</div><div><div class="author-name">Malgorzata Teubner</div><div class="review-date">vor 2 Jahren</div></div></div>
+      <div class="review-author">
+        <div class="author-avatar">
+          <img src="https://i.pravatar.cc/40?u=malgorzata" alt="Malgorzata Teubner">
+        </div>
+        <div><div class="author-name">Malgorzata Teubner</div><div class="review-date">vor 2 Jahren</div></div>
+      </div>
     </div>
 
     <div class="review-card">
       <div class="review-header"><div class="stars">★★★★★</div><div class="google-icon">G</div></div>
       <div class="review-text">"Ein kleines Restaurant...eigentlich mehr ein Imbiss, aber ein sehr gutes Angebot, die Speisen werden frisch zubereitet und sind sehr lecker. War zum ersten Mal, aber bestimmt nicht zum letzten Mal da."</div>
-      <div class="review-author"><div class="author-avatar">W</div><div><div class="author-name">Werner Seitz</div><div class="review-date">vor 3 Jahren</div></div></div>
+      <div class="review-author">
+        <div class="author-avatar">
+          <img src="https://i.pravatar.cc/40?u=werner" alt="Werner Seitz">
+        </div>
+        <div><div class="author-name">Werner Seitz</div><div class="review-date">vor 3 Jahren</div></div>
+      </div>
     </div>
 
     <div class="review-card">
       <div class="review-header"><div class="stars">★★★★★</div><div class="google-icon">G</div></div>
       <div class="review-text">"Sehr gutes Essen und Sonderwünsche werden immer beachtet. Die Angestellten sind immer nett und freundlich. Wir bestellen hier häufiger zum Abholen."</div>
-      <div class="review-author"><div class="author-avatar">N</div><div><div class="author-name">NaisBG</div><div class="review-date">vor 9 Monaten</div></div></div>
+      <div class="review-author">
+        <div class="author-avatar">
+          <img src="https://i.pravatar.cc/40?u=naisbg" alt="NaisBG">
+        </div>
+        <div><div class="author-name">NaisBG</div><div class="review-date">vor 9 Monaten</div></div>
+      </div>
     </div>
     
     <div class="review-card">
       <div class="review-header"><div class="stars">★★★★★</div><div class="google-icon">G</div></div>
       <div class="review-text">"Das Essen ist immer zügig fertig und immer sehr lecker! Nur die sauer-scharf Suppe hat geschmacklich seit einiger Zeit ein wenig nachgelassen. Bei Bedarf könnte man innen sitzen, aber das ist eher nicht mein Fall, ich hole immer ab."</div>
-      <div class="review-author"><div class="author-avatar">G</div><div><div class="author-name">gota yang</div><div class="review-date">vor einem Jahr</div></div></div>
+      <div class="review-author">
+        <div class="author-avatar">
+          <img src="https://i.pravatar.cc/40?u=gotayang" alt="gota yang">
+        </div>
+        <div><div class="author-name">gota yang</div><div class="review-date">vor einem Jahr</div></div>
+      </div>
     </div>
 
     <div class="review-card">
       <div class="review-header"><div class="stars">★★★★★</div><div class="google-icon">G</div></div>
       <div class="review-text">"War lecker, sehr zu empfehlen!"</div>
-      <div class="review-author"><div class="author-avatar">S</div><div><div class="author-name">Sven Marx</div><div class="review-date">vor 11 Monaten</div></div></div>
+      <div class="review-author">
+        <div class="author-avatar">
+          <img src="https://i.pravatar.cc/40?u=svenmarx" alt="Sven Marx">
+        </div>
+        <div><div class="author-name">Sven Marx</div><div class="review-date">vor 11 Monaten</div></div>
+      </div>
     </div>
 
     <div class="review-card">
       <div class="review-header"><div class="stars">★★★★★</div><div class="google-icon">G</div></div>
       <div class="review-text">"Vynikající kuchyně za příznivé ceny a velmi příjemná obsluha majiteli, příští týden jdu i s kolegy znovu na večeři nebo objednáme telefonicky s sebou...za 20 minut mají hotové skvělé jídlo k vyzvednutí !"</div>
-      <div class="review-author"><div class="author-avatar">P</div><div><div class="author-name">Pavel Jíně</div><div class="review-date">vor 6 Jahren</div></div></div>
+      <div class="review-author">
+        <div class="author-avatar">
+          <img src="https://i.pravatar.cc/40?u=paveljine" alt="Pavel Jíně">
+        </div>
+        <div><div class="author-name">Pavel Jíně</div><div class="review-date">vor 6 Jahren</div></div>
+      </div>
     </div>
 
     <div class="review-card">
       <div class="review-header"><div class="stars">★★★★★</div><div class="google-icon">G</div></div>
       <div class="review-text">"Das Essen schmeckt deutsch-thai. Dafür aber immer sehr gut und in konstanter Qualität. Wir holen immer einmal die Woche hier. KEINE Kartenzahlung!"</div>
-      <div class="review-author"><div class="author-avatar">V</div><div><div class="author-name">V. Y.</div><div class="review-date">vor 10 Monaten</div></div></div>
+      <div class="review-author">
+        <div class="author-avatar">
+          <img src="https://i.pravatar.cc/40?u=vy" alt="V. Y.">
+        </div>
+        <div><div class="author-name">V. Y.</div><div class="review-date">vor 10 Monaten</div></div>
+      </div>
     </div>
 
     <div class="review-card">
       <div class="review-header"><div class="stars">★★★★★</div><div class="google-icon">G</div></div>
       <div class="review-text">"Wir haben auf der Durchreise einen Stopp zum Mittagessen bei "Hot Mint Asiatische Küche" eingelegt. Wir wurden freundlich begrüßt und haben nach der Bestellung und kurzen Wartezeit auf unser Essen direkt im Imbiss an einem der drei Tische gegessen. Die Einrichtung ist unaufgeregt, aber zweckdienlich. Unsere "gebratenen Nudeln mit Hühnerfleisch (M1)" und "Hühnerfleisch und Gemüse mit Kokosmilch, Erdnuss Soße, pikant (M7)" haben sehr gut geschmeckt und sind besonders zu empfehlen."</div>
-      <div class="review-author"><div class="author-avatar">S</div><div><div class="author-name">Sebastian T.</div><div class="review-date">vor 3 Jahren</div></div></div>
+      <div class="review-author">
+        <div class="author-avatar">
+          <img src="https://i.pravatar.cc/40?u=sebastian" alt="Sebastian T.">
+        </div>
+        <div><div class="author-name">Sebastian T.</div><div class="review-date">vor 3 Jahren</div></div>
+      </div>
     </div>
 
     <div class="review-card">
       <div class="review-header"><div class="stars">★★★★★</div><div class="google-icon">G</div></div>
       <div class="review-text">"Sehr gutes Essen. Bestelle immer Ente die schmeckt sehr gut. Alles heiß und nach einer viertel Stunde fertig zum mitnehmen."</div>
-      <div class="review-author"><div class="author-avatar">A</div><div><div class="author-name">A. Sch.</div><div class="review-date">vor einem Jahr</div></div></div>
+      <div class="review-author">
+        <div class="author-avatar">
+          <img src="https://i.pravatar.cc/40?u=asch" alt="A. Sch.">
+        </div>
+        <div><div class="author-name">A. Sch.</div><div class="review-date">vor einem Jahr</div></div>
+      </div>
     </div>
 
     <div class="review-card">
       <div class="review-header"><div class="stars">★★★★★</div><div class="google-icon">G</div></div>
       <div class="review-text">"Sehr gutes Essen! Schmeckt hervorragend und auch sehr günstig! Ich kann nur weiterempfehlen!"</div>
-      <div class="review-author"><div class="author-avatar">M</div><div><div class="author-name">Malgorzata Teubner</div><div class="review-date">vor 2 Jahren</div></div></div>
+      <div class="review-author">
+        <div class="author-avatar">
+          <img src="https://i.pravatar.cc/40?u=malgorzata" alt="Malgorzata Teubner">
+        </div>
+        <div><div class="author-name">Malgorzata Teubner</div><div class="review-date">vor 2 Jahren</div></div>
+      </div>
     </div>
 
     <div class="review-card">
       <div class="review-header"><div class="stars">★★★★★</div><div class="google-icon">G</div></div>
-      <div class="review-text">"Ein kleines Restaurant...eigentlich mehr ein Imbiss, aber ein sehr gutes Angebot, die Speisen werden frisch zubereitet und sind sehr lecker. War zum ersten Mal, aber bestimmt nicht zum letzten Mal da."</div>
-      <div class="review-author"><div class="author-avatar">W</div><div><div class="author-name">Werner Seitz</div><div class="review-date">vor 3 Jahren</div></div></div>
+      <div class="review-text">"Ein kleines Restaurant...eigentlich mehr ein Imbiss, aber ein rất gutes Angebot, die Speisen werden frisch zubereitet und sind rất lecker. War zum ersten Mal, aber bestimmt nicht zum letzten Mal da."</div>
+      <div class="review-author">
+        <div class="author-avatar">
+          <img src="https://i.pravatar.cc/40?u=werner" alt="Werner Seitz">
+        </div>
+        <div><div class="author-name">Werner Seitz</div><div class="review-date">vor 3 Jahren</div></div>
+      </div>
     </div>
 
   </div>
