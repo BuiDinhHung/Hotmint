@@ -1,10 +1,10 @@
-<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
 <style>
-  /* Cài đặt chung cho khu vực Liên hệ & Footer */
+  /* Cài đặt chung cho khu vực Liên hệ & Footer (Mặc định dùng Roboto) */
   .hotmint-contact-section {
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Roboto', sans-serif;
     color: #333;
     line-height: 1.5;
     background-color: #fff;
@@ -19,15 +19,17 @@
   .contact-subtitle {
     color: #8ab535; /* Xanh lá Hot Mint */
     font-size: 16px;
-    font-weight: bold;
+    font-weight: 700; /* Roboto đậm */
     text-transform: uppercase;
     letter-spacing: 1px;
   }
   .contact-title {
-    font-family: 'Caveat', cursive; /* Font viết tay giống ảnh mẫu */
-    font-size: 48px;
+    font-family: 'Poppins', sans-serif; /* Dùng Poppins cho Tiêu đề */
+    font-size: 38px;
+    font-weight: 700;
     color: #444;
     margin: 5px 0 0 0;
+    text-transform: uppercase;
   }
 
   /* --- THANH THÔNG TIN (INFO BAR) --- */
@@ -70,9 +72,9 @@
   }
   .info-text p {
     margin: 0;
-    font-size: 13px;
+    font-size: 14px;
     color: #555;
-    font-weight: bold;
+    font-weight: 500;
   }
   .info-text a {
     color: #555;
@@ -85,7 +87,7 @@
   .cash-only-note {
     color: #c4175b !important;
     font-size: 15px !important;
-    font-weight: bold;
+    font-weight: 700;
   }
 
   /* --- BẢN ĐỒ GOOGLE MAPS --- */
@@ -105,6 +107,7 @@
 
   /* --- FOOTER (CHÂN TRANG) --- */
   .hotmint-footer {
+    font-family: 'Roboto', sans-serif;
     background-color: #f4f4f4;
     padding: 50px 20px;
     margin-top: 50px;
@@ -122,10 +125,12 @@
     min-width: 250px;
   }
   .footer-col h3 {
-    font-family: 'Caveat', cursive;
-    font-size: 32px;
+    font-family: 'Poppins', sans-serif; /* Poppins cho Tiêu đề cột */
+    font-size: 22px;
+    font-weight: 700;
     color: #c4175b;
     margin: 0 0 20px 0;
+    text-transform: uppercase;
   }
   .footer-list {
     list-style: none;
@@ -137,6 +142,7 @@
     margin-bottom: 15px;
     font-size: 14px;
     color: #444;
+    line-height: 1.6;
   }
   .footer-list li i {
     color: #c4175b;
@@ -151,19 +157,26 @@
     align-items: center;
     justify-content: center;
   }
+  
+  /* CHỮ HOT MINT LÀ POPPINS */
   .footer-logo-col h2 {
-    font-family: 'Caveat', cursive;
-    font-size: 50px;
+    font-family: 'Poppins', sans-serif; 
+    font-size: 42px;
+    font-weight: 700;
     color: #8ab535;
     margin: 0;
-    line-height: 1;
+    line-height: 1.1;
+    text-transform: uppercase;
   }
+  
+  /* CHỮ ASIATISCHE KÜCHE LÀ ROBOTO */
   .footer-logo-col p {
-    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
     color: #c4175b;
     letter-spacing: 2px;
     text-transform: uppercase;
-    font-weight: bold;
+    font-weight: 700;
     margin-top: 5px;
   }
 
@@ -172,7 +185,8 @@
     .info-bar-container { flex-direction: column; padding: 20px; }
     .info-item { width: 100%; }
     .footer-inner { flex-direction: column; }
-    .contact-title { font-size: 38px; }
+    .contact-title { font-size: 28px; }
+    .footer-logo-col h2 { font-size: 36px; }
   }
 </style>
 
@@ -202,7 +216,7 @@
       <div class="info-icon" style="background-color: #8ab535;"><i class="fa-solid fa-clock"></i></div>
       <div class="info-text">
         <h4 style="color: #c4175b;">Öffnungszeiten</h4>
-        <p>Di - So: 11:30-14:15 & 17:00-20:45<br><span style="color:#777; font-weight:normal;">Montag Ruhetag</span></p>
+        <p>Di - So: 11:30-14:15 & 17:00-20:45<br><span style="color:#777; font-weight:400;">Montag Ruhetag</span></p>
       </div>
     </div>
     <div class="info-item">
@@ -216,7 +230,7 @@
 
   <div class="map-container">
     <iframe 
-      src="https://maps.google.com/maps?q=Hot+Mint+Asiatische+Küche+Rothenburger+Str.+36a,+90522+Oberasbach&t=&z=16&ie=UTF8&iwloc=&output=embed" 
+      src="https://maps.google.com/maps?q=Rothenburger%20Str.%2036a,%2090522%20Oberasbach&t=&z=15&ie=UTF8&iwloc=&output=embed" 
       allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
     </iframe>
   </div>
