@@ -3,27 +3,40 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
 <style>
-  /* Đảm bảo toàn bộ dòng có một kích thước nền bằng nhau (ví dụ 16px) */
-.contact-link {
-  font-size: 16px; 
-  text-decoration: none;
-  color: #444;
-  line-height: 1.8; /* Khoảng cách giữa 2 dòng số */
-}
+  
+  /* Chọn số điện thoại đầu tiên bên trong class .footer-col */
+  .footer-col .contact-link[href^="tel:0911"] {
+    font-size: 1.25em;
+    /* To hẳn lên */
+    font-weight: bold;
+    /* Đậm lên */
+    display: inline-block;
+    /* Đảm bảo kích thước áp dụng đúng */
+    margin-bottom: 2px;
+    /* Thêm một chút khoảng cách phía dưới */
+  }
 
-/* Chỉ làm to riêng cụm 0911 */
-.head-big {
-  font-size: 24px;   /* To hẳn lên so với 16px */
-  font-weight: bold;
-  vertical-align: middle; 
-}
+  /* Chọn số điện thoại thứ hai bên trong class .footer-col */
+  /* Làm cho đầu số 0911 to hẳn lên */
+  .area-code-big {
+    font-size: 1.5em;
+    /* Bạn có thể tăng lên 1.8em nếu muốn to nữa */
+    font-weight: 800;
+    /* Làm đậm nét hơn */
+    vertical-align: middle;
+    /* Căn chỉnh để nó không bị lệch dòng với số sau */
+    color: #333;
+    /* Màu sắc tùy chọn */
+  }
 
-/* Chỉ làm nhỏ riêng cụm 0162 */
-.head-small {
-  font-size: 11px;   /* Nhỏ lại so với 16px */
-  vertical-align: middle;
-    /* Làm mờ nhẹ để trông nhỏ hơn nữa */
-}
+  /* Làm cho đầu số 0162 nhỏ lại */
+  .area-code-small {
+    font-size: 1em;
+    /* Nhỏ hơn so với chữ bình thường */
+
+    /* Làm mờ đi một chút để tạo hiệu ứng nhỏ phụ */
+    font-weight: normal;
+  }
 
   /* --- PHẦN TIÊU ĐỀ --- */
   .contact-header {
